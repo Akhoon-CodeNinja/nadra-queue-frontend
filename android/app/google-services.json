@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "951329556579",
+    "project_id": "nadra-queue-system",
+    "storage_bucket": "nadra-queue-system.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951329556579:android:8894ba3b5dc3a69b03d056",
+        "android_client_info": {
+          "package_name": "com.example.nadra_queue_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfukWLxNCujBGd3qyGZwrBJEKsia-ZBX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

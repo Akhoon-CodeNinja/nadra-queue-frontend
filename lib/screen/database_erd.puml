@@ -1,0 +1,48 @@
+@startuml
+!theme plain
+
+' Entity circles hide karne aur lines ko seedha rakhne ke liye settings
+hide circle
+skinparam linetype ortho
+
+' Users Table
+entity "Users" as users {
+  * user_id : UUID <<PK>>
+  --
+  * full_name : VARCHAR
+  * cnic : VARCHAR <<unique>>
+  * phone : VARCHAR
+  * password_hash : VARCHAR
+  created_at : TIMESTAMP
+}
+
+' Offices Table
+entity "Offices" as offices {
+  * office_id : INT <<PK>>
+  --
+  * branch_name : VARCHAR
+  * address : TEXT
+  * google_place_id : VARCHAR <<unique>>
+  base_capacity : INT
+}
+
+' Tokens Table (Queue)
+entity "Tokens" as tokens {
+  * token_id : UUID <<PK>>
+  --
+  * token_number : VARCHAR (e.g., 'A-47')
+  * user_id : UUID <<FK>>
+  * office_id : INT <<FK>>
+  * status : ENUM ('Active', 'Completed', 'Cancelled')
+  estimated_wait_time : INT
+  created_at : TIMESTAMP
+}
+
+' Relationships Define Karna
+' Ek User multiple tokens generate kar sakta hai (history mein)
+users ||..o{ tokens : "books"
+
+' Ek Office mein multiple tokens hote hain
+offices ||..o{ tokens : "has"
+
+@enduml

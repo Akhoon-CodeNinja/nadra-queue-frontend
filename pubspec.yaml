@@ -1,0 +1,42 @@
+name: nadra_queue_app
+description: A new Flutter project
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  http: ^1.2.1
+  shared_preferences: ^2.5.5
+  speech_to_text: ^6.6.0
+  flutter_tts: ^4.0.2
+  google_maps_flutter: ^2.6.0
+  url_launcher: ^6.2.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - lib/screen/logo.png   # ✅ YOUR ACTUAL PATH
+
+fonts:
+  - family: Urdu
+    fonts:
+      - asset: assets/fonts/NotoNastaliqUrdu-Regular.ttf
+    style: TextStyle(
+    fontFamily: 'Urdu'
+    fontSize: 11,)
+    
