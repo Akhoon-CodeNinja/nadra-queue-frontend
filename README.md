@@ -21,39 +21,44 @@ Follow these steps to run the mobile app on your local machine or emulator:
 
 **1. Clone the repository:**
 ```bash
-git clone [https://github.com/yourusername/nadra-queue-frontend.git](https://github.com/yourusername/nadra-queue-frontend.git)
+git clone [https://github.com/Akhoon-CodeNinja/nadra-queue-frontend.git](https://github.com/Akhoon-CodeNinja/nadra-queue-frontend.git)
 cd nadra-queue-frontend
-2. Fetch Flutter packages:
-Bash
+```
 
+**2. Fetch Flutter packages:**
+```bash
 flutter pub get
+```
 
-3. Configure the Backend API:
-Open lib/api_config.dart and ensure the base URL points to your running backend (either localhost or your PythonAnywhere domain):
-
-Dart
-
+**3. Configure the Backend API:**
+Open `lib/api_config.dart` and ensure the base URL points to your running backend (either localhost or your PythonAnywhere domain):
+```dart
 static const String baseUrl = '[http://yourusername.pythonanywhere.com/api](http://yourusername.pythonanywhere.com/api)';
-4. Run the application:
+```
 
-Bash
-
+**4. Run the application:**
+```bash
 flutter run
-📂 Key Project Structure
-/lib/screens/ - Contains all UI views (HomeScreen, BookingWizard, ChatbotScreen, etc.)
+```
 
-/lib/api_config.dart - Centralized API endpoint management.
+## 📂 Key Project Structure
+* `/lib/screens/` - Contains all UI views (HomeScreen, BookingWizard, ChatbotScreen, etc.)
+* `/lib/api_config.dart` - Centralized API endpoint management.
 
-👨‍💻 Author
-Dilawer Khan - AI & Data Science Engineer (Team Lead)
-
+## 👨‍💻 Author
+**Dilawer Khan** - *AI & Data Science Engineer (Team Lead)*
+```
 
 ---
 
-### 3. Frontend ko CMD ke zariye Push Karein
+### 2. CMD Commands (Push Karne Ke Liye)
+Apne Flutter folder (`nadra_queue_app`) mein CMD open karein aur in commands ko ek ek karke run karein:
 
-Ab apne Flutter project ke folder (jaise `Desktop\Project AI\nadra_queue_app`) mein CMD open karein aur bari bari yeh commands run karein:
-
-**Step 1: Git Initialize karein**
 ```cmd
 git init
+git add .
+git commit -m "Initial commit with complete Flutter frontend and README"
+git branch -M main
+git remote add origin https://github.com/Akhoon-CodeNinja/nadra-queue-frontend.git
+git push -u origin main
+```
